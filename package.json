@@ -10,10 +10,9 @@
   "scripts": {
     "dev:ts": "tsc --watch --pretty",
     "clean": "rimraf dist/",
-    "build": "npm-run-all clean bundle:prod copy-defs size",
-    "bundle:prod": "microbundle build",
+    "build": "npm-run-all clean bundle:prod size",
+    "bundle:prod": "microbundle build --external react --jsx React.createElement",
     "bundle:watch": "microbundle watch",
-    "copy-defs": "tsc --skipLibCheck --project tsconfig_base.json && cp -r ts-build/*.d.ts dist/",
     "lint": "eslint",
     "test": "npm run build",
     "size": "bundlesize",
@@ -72,6 +71,7 @@
   "devDependencies": {
     "@types/react": "^18.0.18",
     "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/parser": "^5.47.0",
     "babel-core": "^6.26.3",
     "bundlesize": "^0.18.1",
     "eslint": "^8.29.0",
