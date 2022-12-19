@@ -21,7 +21,7 @@
   "bundlesize": [
     {
       "path": "dist/react-lazy-images.js",
-      "maxSize": "3kb"
+      "maxSize": "3.3kb"
     }
   ],
   "husky": {
